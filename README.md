@@ -26,17 +26,22 @@ Do not share your personal access token.
 
 Enter the following command with your personal access token inserted:
 
+```
 !git clone https://{personal access token}github.com/howesa/CHI22-CogMod-Tutorial
+```
 
 5. Change directory into the git folder
 
+```
 %cd CHI22-CogMod-Tutorial
+```
 
 6. configure your email and name
 
+```
 !git config --global user.email "howesa@mac.com"
-
 !git config --global user.name "Andrew Howes"
+```
 
 8. Modify the repository (developers only!) using !git add, !git commit, !git push
 
