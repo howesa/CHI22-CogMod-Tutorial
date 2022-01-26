@@ -9,9 +9,9 @@ Designed for delivery at CHI'2022 by Jussi Jokinen, Antti Oulasvirta and Andrew 
 
 2. In a code cell, mount Google drive
 
-from google.colab import drive
+  from google.colab import drive
 
-drive.mount('/content/drive')
+  drive.mount('/content/drive')
 
 3. Generate a personal access token for github
 
