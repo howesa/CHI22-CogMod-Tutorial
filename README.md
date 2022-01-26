@@ -9,7 +9,8 @@ Designed for delivery at CHI'2022 by Jussi Jokinen, Antti Oulasvirta and Andrew 
 
 2. In a code cell, mount Google drive
 
-from google.colab import drive 
+from google.colab import drive
+
 drive.mount('/content/drive')
 
 3. Generate a personal access token for github
@@ -33,6 +34,7 @@ Enter the following command with your personal access token inserted:
 6. configure your email and name
 
 !git config --global user.email "howesa@mac.com"
+
 !git config --global user.name "Andrew Howes"
 
 8. Modify the repository (developers only!) using !git add, !git commit, !git push
