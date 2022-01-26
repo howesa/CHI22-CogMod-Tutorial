@@ -33,7 +33,7 @@ Enter the following command with your personal access token inserted:
 5. Change directory into the git folder
 
 ```
-%cd CHI22-CogMod-Tutorial
+%cd '/content/drive/MyDrive/Colab Notebooks/CHI22-CogMod-Tutorial'
 ```
 
 6. configure your email and name
