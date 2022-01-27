@@ -27,7 +27,7 @@ Do not share your personal access token.
 Enter the following command with your personal access token inserted:
 
 ```
-!git clone https://{personal access token}github.com/howesa/CHI22-CogMod-Tutorial
+!git clone https://{personal access token}github.com/{username}/CHI22-CogMod-Tutorial
 ```
 
 5. Change directory into the git folder
