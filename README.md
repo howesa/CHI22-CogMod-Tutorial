@@ -27,10 +27,25 @@ Do not share your personal access token.
 Enter the following command with your personal access token inserted:
 
 ```
-!git clone https://{personal access token}github.com/{username}/CHI22-CogMod-Tutorial
+!git clone https://{personal access token}@github.com/{username}/CHI22-CogMod-Tutorial
+```
+
+Set the duration of the access token as you desire.
+
+Do not check any of the scope tick boxes unless you know what you are doing.
+
+When successful, you should see this on the last row:
+
+```
+Unpacking objects:...
 ```
 
 5. Change directory into the git folder
+
+```
+%cd 'CHI22-CogMod-Tutorial'
+```
+or
 
 ```
 %cd '/content/drive/MyDrive/Colab Notebooks/CHI22-CogMod-Tutorial'
