@@ -13,8 +13,7 @@ Designed for delivery at CHI 2022 by Jussi Jokinen, Antti Oulasvirta and Andrew 
 5.  In the top left corner click on the "+ New" button again.
 6.  This time click on "More" at the bottom of the pop-up.
 7.  Click on "Google Colaboratory" to create a new notebook in Colab.
-8.  Open the notebook
-9.  Paste the following lines into the code cell (a long black text window) in the notebook:
+9.  Paste the following lines into the code cell (a long text window) in the notebook:
 
 ```
   from google.colab import drive
