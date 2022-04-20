@@ -25,14 +25,9 @@ Enter the following command with your personal access token inserted:
 !git clone https://github.com/howesa/CHI22-CogMod-Tutorial
 ```
 
-Set the duration of the access token as you desire.
-
-Do not check any of the scope tick boxes unless you know what you are doing.
-
-When successful, you should see this on the last row:
-
+When successful you should see something like:
 ```
-Unpacking objects:...
+Resolving deltas... done:...
 ```
 
 5. Change directory into the git folder
