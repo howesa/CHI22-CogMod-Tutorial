@@ -6,7 +6,7 @@ Designed for delivery at CHI'2022 by Jussi Jokinen, Antti Oulasvirta and Andrew 
 
 ### Getting started
 
-1. In a Chrome browser navigate to Google Colab and create a new notebook (link in bottom right of the pop-up).
+1. In a Chrome browser navigate to Google Drive and create a new notebook (the link under "more" in bottom right of the + pop-up).
 
 2. In a code cell, mount Google drive
 
