@@ -15,15 +15,9 @@ Designed for delivery at CHI'2022 by Jussi Jokinen, Antti Oulasvirta and Andrew 
   drive.mount('/content/drive')
 ```
 
-3. Generate a personal access token for github
+Run the code cell and mount Google drive.
 
-For this you will need your personal access token. Go to your github web page and click on your photo in the top right corner. Next, click on "settings" and then "developer settings". Then click on  Personal access tokens and "Generate token".
-
-Copy your personal access token to the clipboard and keep a copy of it somewhere safe.
-
-Do not share your personal access token.
-
-4. Clone the CHI22-CogMod-Tutorial github repository
+3. Clone the CHI22-CogMod-Tutorial github repository
 
 Enter the following command with your personal access token inserted:
 
