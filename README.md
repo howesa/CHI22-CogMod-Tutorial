@@ -30,24 +30,8 @@ When successful you should see something like:
 Resolving deltas... done:...
 ```
 
-5. Change directory into the git folder
+4. Change directory into the git folder
 
 ```
 %cd 'CHI22-CogMod-Tutorial'
 ```
-or
-
-```
-%cd '/content/drive/MyDrive/Colab Notebooks/CHI22-CogMod-Tutorial'
-```
-
-6. configure your email and name
-
-```
-!git config --global user.email "howesa@mac.com"
-!git config --global user.name "Andrew Howes"
-```
-
-8. Modify the repository (developers only!) using !git add, !git commit, !git push
-
-9. Congratulations.
