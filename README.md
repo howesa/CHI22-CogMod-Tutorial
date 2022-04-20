@@ -35,8 +35,8 @@ Next click on "CHI22-CogMod_Tutorial"
 
 You should see a set of folders including:
 
-.git
-00-preparatiion
+.git<br>
+00-preparatiion<br>
 01-Introduction
 
 etc.
