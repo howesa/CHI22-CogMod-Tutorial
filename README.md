@@ -15,16 +15,15 @@ Designed for delivery at CHI'2022 by Jussi Jokinen, Antti Oulasvirta and Andrew 
   drive.mount('/content/drive')
 ```
 
-Run the code cell and mount Google drive.
+Run the code cell to mount the drive.
 
 3. Clone the CHI22-CogMod-Tutorial github repository
 
-Enter the following command with your personal access token inserted:
-
+Enter:
 ```
 !git clone https://github.com/howesa/CHI22-CogMod-Tutorial /content/drive/My\ Drive/Colab\ Notebooks/CHI22_CogMod_Tutorial```
 
-When successful you should see something like:
+When successful you should see a last line which is something like:
 ```
 Resolving deltas: 100% (...) done:
 ```
@@ -34,3 +33,13 @@ Resolving deltas: 100% (...) done:
 Navigate to your Google drive folder and click on the folder "Colab Notebooks"
 
 Next click on "CHI22-CogMod_tutorial"
+
+You should see a set of folders including:
+
+.git
+00-preparatiion
+01-Introduction
+
+etc.
+
+Well done!
