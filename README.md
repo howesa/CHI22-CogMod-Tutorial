@@ -22,7 +22,7 @@ Run the code cell and mount Google drive.
 Enter the following command with your personal access token inserted:
 
 ```
-!git clone https://{personal access token}@github.com/{username}/CHI22-CogMod-Tutorial
+!git clone https://github.com/howesa/CHI22-CogMod-Tutorial
 ```
 
 Set the duration of the access token as you desire.
