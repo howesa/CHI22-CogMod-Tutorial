@@ -23,7 +23,7 @@ Designed for delivery at CHI 2022 by Jussi Jokinen, Antti Oulasvirta and Andrew 
 
 Run the code cell by pressing the triangle in a circle button to the left of the code cell.
 
-You will be asked whether you want to permit this notebook to access your google drive. Say, yes.
+You will be asked whether you want to permit this notebook to access your google drive. Say, yes and select the account if you are asked to do so.
 
 If this is successful then you should see something like the following (though numbers will differ):
 
