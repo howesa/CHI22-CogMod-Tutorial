@@ -22,17 +22,16 @@ Run the code cell to mount the drive.
 Enter:
 ```
 !git clone https://github.com/howesa/CHI22-CogMod-Tutorial /content/drive/My\ Drive/Colab\ Notebooks/CHI22_CogMod_Tutorial```
-
+```
 When successful you should see a last line which is something like:
-```
+
 Resolving deltas: 100% (...) done:
-```
 
 4. Go to the cloned folder
 
 Navigate to your Google drive folder and click on the folder "Colab Notebooks"
 
-Next click on "CHI22-CogMod_tutorial"
+Next click on "CHI22-CogMod_Tutorial"
 
 You should see a set of folders including:
 
@@ -42,4 +41,4 @@ You should see a set of folders including:
 
 etc.
 
-Well done!
+Well done! You have successfully cloned the github repository.  Now to get started open the file getting_started.ipynb and follow the instructions.
