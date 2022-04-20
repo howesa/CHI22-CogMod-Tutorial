@@ -22,16 +22,15 @@ Run the code cell and mount Google drive.
 Enter the following command with your personal access token inserted:
 
 ```
-!git clone https://github.com/howesa/CHI22-CogMod-Tutorial
-```
+!git clone https://github.com/howesa/CHI22-CogMod-Tutorial /content/drive/My\ Drive/Colab\ Notebooks/CHI22_CogMod_Tutorial```
 
 When successful you should see something like:
 ```
-Resolving deltas... done:...
+Resolving deltas: 100% (...) done:
 ```
 
-4. Change directory into the git folder
+4. Go to the cloned folder
 
-```
-%cd 'CHI22-CogMod-Tutorial'
-```
+Navigate to your Google drive folder and click on the folder "Colab Notebooks"
+
+Next click on "CHI22-CogMod_tutorial"
