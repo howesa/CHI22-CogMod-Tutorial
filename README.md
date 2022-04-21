@@ -4,6 +4,10 @@ CogMod-Tutorial is a set of Python Jupyter Notebooks designed as an introduction
 
 Designed for delivery at CHI 2022 by Jussi Jokinen, Antti Oulasvirta and Andrew Howes with thanks to Xiuli Chen.
 
+Before starting the tutorial it is worth knowing a little about the Python programming language and also about Jupyter Notebooks. 
+
+The notebooks for the tutorial are made available in this GitHub repository. To run the notebooks they must be either uploaded Google Colaboratory (Colab) or downloaded and run in a local installation of Jupyter. The instructions for getting started below upload the the tutorial onto your own private Google Colab server. In order to complete this upload, you will need a Google drive account. 
+
 ### Getting started
 
 1.  In a Chrome browser navigate to your Google Drive.
