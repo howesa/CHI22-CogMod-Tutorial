@@ -18,13 +18,13 @@ Note that the full version of the tutorial will only be available on the day tha
 4.  Navigate into the folder.
 5.  In the top left corner click on the "+ New" button again.
 6.  This time click on "More" at the bottom of the pop-up.
-7.  Click on "Google Colaboratory" to create a new notebook in Colab.
-9.  Paste the following lines into the code cell (a long text window) in the notebook:
+7.  Click on "Google Colaboratory" to create a new notebook.
+9.  Paste the following lines into the code cell (a text window) within the new notebook.
 
 ```
-  from google.colab import drive
-  drive.mount('/content/drive')
-  !git clone https://github.com/howesa/CHI22-CogMod-Tutorial /content/drive/My\ Drive/CHI22CMT/CHI22_CogMod_Tutorial
+from google.colab import drive
+drive.mount('/content/drive')
+!git clone https://github.com/howesa/CHI22-CogMod-Tutorial /content/drive/My\ Drive/CHI22CMT/CHI22_CogMod_Tutorial
 ```
 
 Run the code cell by pressing the triangle in a circle button to the left of the code cell.
