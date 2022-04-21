@@ -27,7 +27,7 @@ drive.mount('/content/drive')
 !git clone https://github.com/howesa/CHI22-CogMod-Tutorial /content/drive/My\ Drive/CHI22CMT/CHI22_CogMod_Tutorial
 ```
 
-Run the code cell by pressing the triangle in a circle button to the left of the code cell.
+Run the code cell by pressing the triangle in a circle button to the left of the code cell. If you get an error then check that there are no spaces before the lines of text that you have copied.
 
 You will be asked whether you want to permit this notebook to access your google drive. Say, yes and select the account if you are asked to do so.
 
