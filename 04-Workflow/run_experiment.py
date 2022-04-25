@@ -24,57 +24,57 @@ def run_experiment(params, until, max_iters = 10, debug = False):
     return trace
 
 
-# Default params
-params = {"speed": 17,
-          "obs_prob": 0.8,
-          "an": 0.01,
-          "sn": 0.02,
-          "or": -1,
-          "cols": 3,
-          "rows": 3,
-          "fr": 10}
+# # Default params
+# params = {"speed": 17,
+#           "obs_prob": 0.8,
+#           "an": 0.01,
+#           "sn": 0.02,
+#           "or": -1,
+#           "cols": 3,
+#           "rows": 3,
+#           "fr": 10}
 
-# Params from command line
-# example speed:17 obs_prob:0.8 an:0.01 sn:0.02 or:-1 cols:3 rows:3 fr:10
-# heading: speed obs.prob action.noise steering.noise oob.reward cols rows found.reward
-if len(sys.argv) > 2:
-    params_s = None
-    for i in range(len(sys.argv)-1):
-        s = sys.argv[i+1].split(':')
-        assert s[0] in params
-        params[s[0]] = float(s[1])
-        if params_s == None:
-            params_s = s[1]
-        else:
-            params_s = params_s + " " + s[1]
-    until = 1200
-    trace = multitasking_agent.summarise_trace(run_experiment(params, until, max_iters = 20))
-    print(params_s, trace)
+# # Params from command line
+# # example speed:17 obs_prob:0.8 an:0.01 sn:0.02 or:-1 cols:3 rows:3 fr:10
+# # heading: speed obs.prob action.noise steering.noise oob.reward cols rows found.reward
+# if len(sys.argv) > 2:
+#     params_s = None
+#     for i in range(len(sys.argv)-1):
+#         s = sys.argv[i+1].split(':')
+#         assert s[0] in params
+#         params[s[0]] = float(s[1])
+#         if params_s == None:
+#             params_s = s[1]
+#         else:
+#             params_s = params_s + " " + s[1]
+#     until = 1200
+#     trace = multitasking_agent.summarise_trace(run_experiment(params, until, max_iters = 20))
+#     print(params_s, trace)
 
-def print_params():
-    for s in [17,33]:
-        for obs_prob in [0.8]:
-            for an in [0.01,0.1]:
-                for sn in [0.01,0.1]:
-                    for or_ in [-5,-1]:
-                        for cols in [3,4]:
-                            for rows in [4,4]:
-                                for fr in [1, 10]:
-                                    st = "speed:" + str(s) + " obs_prob:" + str(obs_prob) + " an:" + str(an) + " sn:" + str(sn) + " or:" + str(or_) + " cols:" + str(cols) + " rows:" + str(rows) + " fr:" + str(fr)
-                                    print(st)
+# def print_params():
+#     for s in [17,33]:
+#         for obs_prob in [0.8]:
+#             for an in [0.01,0.1]:
+#                 for sn in [0.01,0.1]:
+#                     for or_ in [-5,-1]:
+#                         for cols in [3,4]:
+#                             for rows in [4,4]:
+#                                 for fr in [1, 10]:
+#                                     st = "speed:" + str(s) + " obs_prob:" + str(obs_prob) + " an:" + str(an) + " sn:" + str(sn) + " or:" + str(or_) + " cols:" + str(cols) + " rows:" + str(rows) + " fr:" + str(fr)
+#                                     print(st)
 
-if len(sys.argv) == 2:
-    print_params()
+# if len(sys.argv) == 2:
+#     print_params()
 
-params = {"speed": 17,
-          "obs_prob": 0.8,
-          "an": 0.01,
-          "sn": 0.02,
-          "or": -1,
-          "cols": 3,
-          "rows": 3,
-          "fr": 10}
+# params = {"speed": 17,
+#           "obs_prob": 0.8,
+#           "an": 0.01,
+#           "sn": 0.02,
+#           "or": -1,
+#           "cols": 3,
+#           "rows": 3,
+#           "fr": 10}
 
-# Running this will take about 10 minutes.
-trace = run_experiment(params, 1200, max_iters = 20)
-print(multitasking_agent.summarise_trace(trace))
+# # Running this will take about 10 minutes.
+# trace = run_experiment(params, 1200, max_iters = 20)
+# print(multitasking_agent.summarise_trace(trace))

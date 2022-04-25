@@ -99,8 +99,10 @@ def summarise_trace(trace):
     oob = 0
     on_road = 1
     off_road = 0
+    xs = []
     for i in range(len(trace["driver"])):
         x = trace["driver"][i][1]
+        xs.append(x)
         # Only record oob once per violation, not for each step
         if (x < threshold or x > 1 - threshold):
             off_road += 1
@@ -111,9 +113,10 @@ def summarise_trace(trace):
             inside = False
         if not inside and (x >= threshold or x <= 1 - threshold):
             inside = True
+    std = np.std(xs)
 
     task_time = []
-    start_time = 0
+    start_time = 0    
     for i in range(len(trace["search"])-1):
         if trace["search"][i+1][1] == 0:
             task_time.append(trace["search"][i+1][0]-start_time)
@@ -123,6 +126,7 @@ def summarise_trace(trace):
         task_time = [0]
 
     ret = {}
+    ret['sd_of_x'] = xs
     ret['switches'] = switch
     ret['n_oob'] = oob
     ret['oob'] = off_road/on_road
