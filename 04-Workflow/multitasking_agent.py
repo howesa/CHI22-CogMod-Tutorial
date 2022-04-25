@@ -109,7 +109,7 @@ def summarise_trace(trace):
         if inside and (x < threshold or x > 1 - threshold):
             oob += 1
             inside = False
-        if inside and (x > threshold or x < 1 - threshold):
+        if not inside and (x >= threshold or x <= 1 - threshold):
             inside = True
 
     task_time = []
@@ -117,12 +117,18 @@ def summarise_trace(trace):
     for i in range(len(trace["search"])-1):
         if trace["search"][i+1][1] == 0:
             task_time.append(trace["search"][i+1][0]-start_time)
-            start_time = trace["search"][i+1][1]
+            start_time = trace["search"][i+1][0]
 
     if len(task_time) == 0:
         task_time = [0]
 
-    return switch, oob, off_road/on_road, np.mean(task_time)
+    ret = {}
+    ret['switches'] = switch
+    ret['n_oob'] = oob
+    ret['oob'] = off_road/on_road
+    ret['task_time'] = np.mean(task_time)
+
+    return ret
 
 # d = driver.driver(17)
 # d.learn_t_hat()

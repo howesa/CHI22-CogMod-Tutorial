@@ -45,7 +45,7 @@ class multitasking(Env):
                 self.attended = 0
             # Drive blindly for the duration of the attention switch
             self.driver_agent.driver.has_attention = False
-            for i in range(int(np.floor(self.attention_switch_time / self.driver_agent.driver.step_time))):
+            for i in range(int(np.ceil(self.attention_switch_time / self.driver_agent.driver.step_time))):
                 a = self.driver_agent.get_action()
                 self.driver_agent.driver.step(a)
             mt += self.attention_switch_time
