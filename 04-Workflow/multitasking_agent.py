@@ -126,7 +126,7 @@ def summarise_trace(trace):
         task_time = [0]
 
     ret = {}
-    ret['sd_of_x'] = xs
+    ret['sd_of_x'] = std
     ret['switches'] = switch
     ret['n_oob'] = oob
     ret['oob'] = off_road/on_road
