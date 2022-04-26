@@ -71,11 +71,13 @@ def plot_trace(trace, until = 1e10):
     d_a = []
     s = []
 
-    for i in range(min(until, len(trace["multi"]))):
+    for i in range(len(trace["multi"])):
         t.append(trace["multi"][i][0])
         d.append(trace["driver"][i][1])
         d_a.append(trace["driver"][i][2])
         s.append(trace["search"][i][1])
+        if trace["multi"][i][0] > until:
+            break
     plt.subplot(1, 2, 1)
     plt.scatter(t,d,c = d_a)
     plt.plot(t,d, marker = ".")
@@ -92,6 +94,7 @@ def summarise_trace(trace):
             switch += 1
             attending_driving = False
         if not attending_driving and trace["driver"][i][2] == 1:
+            
             attending_driving = True
 
     inside = True # note, assuming we start from inside lane
@@ -116,11 +119,15 @@ def summarise_trace(trace):
     std = np.std(xs)
 
     task_time = []
-    start_time = 0    
+    start_time = 0
+    new_task = True
     for i in range(len(trace["search"])-1):
-        if trace["search"][i+1][1] == 0:
+        if new_task and trace["search"][i+1][1] == 0:
             task_time.append(trace["search"][i+1][0]-start_time)
             start_time = trace["search"][i+1][0]
+            new_task = False
+        if not new_task and trace["search"][i+1][1] != 0:
+            new_task = True
 
     if len(task_time) == 0:
         task_time = [0]
@@ -129,7 +136,7 @@ def summarise_trace(trace):
     ret['sd_of_x'] = std
     ret['switches'] = switch
     ret['n_oob'] = oob
-    ret['oob'] = off_road/on_road
+    ret['oob'] = off_road/(off_road+on_road)
     ret['task_time'] = np.mean(task_time)
 
     return ret

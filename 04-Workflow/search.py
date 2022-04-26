@@ -42,6 +42,7 @@ class search(Env):
         self.found = False
         self.reward = 0
         self.mt = 0
+        self.moved = True
 
         # Start with a random eye location but do not observe that location. Reward for the start is 0.
         self.eye_loc = self.action_to_loc(self.action_space.sample())
@@ -128,6 +129,7 @@ class search(Env):
 
         self.reward -= mt
         self.mt += mt
+        self.moved = moved
 
         return self.obs, self.reward, self.done, {}
 

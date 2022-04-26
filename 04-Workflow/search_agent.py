@@ -3,6 +3,8 @@ import search
 import numpy as np
 from stable_baselines3 import PPO
 
+import matplotlib.pyplot as plt
+
 class search_agent():
     def __init__(self, search):
         self.search = search
@@ -35,7 +37,7 @@ class search_agent():
                 self.min_value = val                            
             action = self.get_action()
             self.search.step(action)
-            tr.append([self.search.mt, self.search.action_to_loc(action)])
+            tr.append([self.search.mt, self.search.moved, self.search.action_to_loc(action)])
         return self.search.mt, self.search.steps, self.search.fixations, tr
 
     def get_action(self):
@@ -70,6 +72,14 @@ class search_agent():
                 done = True
 
         return training_info
+
+def summarise_trace(data):
+    print("Search time:", data[0])
+    print("N of encodings:", data[1])
+    print("N of fixations:", data[2])
+    print("Trace:")
+    for i in range(len(data[3])):
+        print("  ", data[3][i])
 
 def visualise_training(data, col):
     plt.close()
