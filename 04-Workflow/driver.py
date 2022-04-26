@@ -23,7 +23,7 @@ class driver(Env):
         # Actions are discrete between [0,max_actions], and translated
         # into radians according to this.
         # (0 = -max_steer, max_actions = max_steer)
-        self.max_steer = 0.025
+        self.max_steer = 0.08
 
         self.step_time = 0.15
 
@@ -81,7 +81,12 @@ class driver(Env):
         # Observe?
         if self.has_attention:
             self.x_b = np.zeros(self.n_xb) + ((1 - self.obs_prob) / self.n_xb)
-            self.x_b[int(self.x * self.n_xb)] = self.obs_prob
+            if random.random() < self.obs_prob:
+                x = self.x
+            else:
+                x = random.random()
+
+            self.x_b[int(x * self.n_xb)] = self.obs_prob
 
         # Bayesian belief update using model
         if self.continuous:
