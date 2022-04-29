@@ -29,13 +29,13 @@ class multitasking_agent():
             if max_iters and max_iters == i:
                 done = True
 
-    def get_action(self, state = None):
+    def get_action(self, state = None, deterministic = False):
         if not state:
             state = self.multitasking.get_belief()
-        a, _ = self.agent.predict(state)
+        a, _ = self.agent.predict(state, deterministic = deterministic)
         return a
 
-    def simulate(self, until, trace = False):
+    def simulate(self, until, trace = False, deterministic = False):
         if trace:
             trace = {}
             trace["multi"] = []
@@ -46,7 +46,7 @@ class multitasking_agent():
         switches = 0
         self.multitasking.reset()
         while self.multitasking.time < until:
-            a = self.get_action()
+            a = self.get_action(deterministic = deterministic)
             if a != self.multitasking.attended:
                 switches += 1
             _, r, _, _ = self.multitasking.step(a)
