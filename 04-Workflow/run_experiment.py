@@ -7,7 +7,7 @@ import multitasking_agent
 
 import sys
 
-def run_experiment(params, until, max_iters = 10, debug = False):
+def run_experiment(params, until, max_iters = 10, debug = False, deterministic = False):
     d = driver.driver(speed = params["speed"], obs_prob = params["obs_prob"],
                            action_noise = params["an"], steer_noise = params["sn"],
                            oob_reward = params["or"])
@@ -20,7 +20,7 @@ def run_experiment(params, until, max_iters = 10, debug = False):
     m = multitasking.multitasking(d_agent, s_agent)
     m_agent = multitasking_agent.multitasking_agent(m)
     m_agent.train_agent(max_iters = max_iters, debug = debug)
-    trace = m_agent.simulate(until = until, trace = True)
+    trace = m_agent.simulate(until = until, trace = True, deterministic = deterministic)
     return trace
 
 
