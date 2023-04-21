@@ -6,7 +6,7 @@ import search_agent
 import numpy as np
 from stable_baselines3 import PPO
 
-import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt 
 
 class multitasking_agent():
     def __init__(self, multitasking):
