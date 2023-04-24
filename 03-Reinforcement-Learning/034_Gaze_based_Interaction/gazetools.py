@@ -94,7 +94,7 @@ def run_model(env, controller, n_episodes, filename):
     while eps < n_episodes:                
         done = False
         step = 0
-        obs = env.reset()
+        obs, _ = env.reset()
         # record the initial state
         info = env.get_info()
         info['episode'] = eps
