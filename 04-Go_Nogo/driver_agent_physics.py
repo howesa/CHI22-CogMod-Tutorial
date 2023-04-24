@@ -54,7 +54,7 @@ class driver_agent_physics(Env):
         # Init prior as basically flat.
         self.prior = {}
         self.prior['distance'] = self.max_distance/2
-        self.prior['distance_var'] = 1
+        self.prior['distance_var'] = 1000
 
         self.belief = self.get_belief()
 
