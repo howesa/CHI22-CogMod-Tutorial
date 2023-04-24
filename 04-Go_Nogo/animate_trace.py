@@ -18,8 +18,8 @@ def animate_trace(trace, get_anim = False, x_lim = [-100,100], y_lim = [100,-100
     axl = plt.gca()
     axl.invert_yaxis()
 
-    veh1 = plt.Circle((0, 0), 3, fc='orange')
-    veh2 = plt.Circle((0, 0), 3, fc='red')
+    veh1 = plt.Circle((0, 0), 2, fc='orange')
+    veh2 = plt.Circle((0, 0), 2, fc='red')
 
     time_text = ax.text(-30, 40, "Time:", fontsize=8)
     dist_text = ax.text(-30, 35, "Dist:", fontsize=8)
