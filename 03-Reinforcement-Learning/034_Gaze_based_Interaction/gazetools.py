@@ -105,7 +105,7 @@ def run_model(env, controller, n_episodes, filename):
             step+=1
             # get the next prediction action from the controller
             action, _ = controller.predict(obs,deterministic = True)
-            obs, reward, done, info = env.step(action)
+            obs, reward, done, _, info = env.step(action)
             info['episode'] = eps
             df = df.append(info, ignore_index = True)
             if done:
