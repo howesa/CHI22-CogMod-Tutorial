@@ -113,7 +113,7 @@ def run_model(env, controller, n_episodes, filename):
     path = f'{output_dir}{filename}'
     df = pd.DataFrame(result)
     df.to_csv(path,index=False)
-    return path
+    return df
 
 '''
 '''
