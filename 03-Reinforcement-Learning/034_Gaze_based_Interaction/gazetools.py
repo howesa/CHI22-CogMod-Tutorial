@@ -88,7 +88,7 @@ def run_model(env, controller, n_episodes, filename):
         print(f'If you want to run more training episodes then please do so on a local computer.')
         return
 
-    df = pd.DataFrame()
+    result = []
     # repeat for n episodes
     eps = 0
     while eps < n_episodes:                
@@ -98,7 +98,7 @@ def run_model(env, controller, n_episodes, filename):
         # record the initial state
         info = env.get_info()
         info['episode'] = eps
-        df = df.append(info, ignore_index = True)
+        result.append(info)
  
         # repeat until the gaze is on the target.
         while not done:
@@ -107,10 +107,11 @@ def run_model(env, controller, n_episodes, filename):
             action, _ = controller.predict(obs,deterministic = True)
             obs, reward, done, _, info = env.step(action)
             info['episode'] = eps
-            df = df.append(info, ignore_index = True)
+            result.append(info)
             if done:
                 eps+=1
     path = f'{output_dir}{filename}'
+    df = pd.DataFrame(result)
     df.to_csv(path,index=False)
     return path
 
