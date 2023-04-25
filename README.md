@@ -8,6 +8,6 @@ Before starting the tutorial it is worth knowing a little about the Python progr
 
 The notebooks for the tutorial will be made available in this GitHub repository on the day of the tutorial. 
 
-If you are attending the tutorial then -- before this date -- you should read the contents of the file getting_started.ipynb.
+If you are attending the tutorial then -- before this date -- you should read the contents of the file 01-Introduction/getting_started.ipynb
 
 If you click on getting_started.ipynb in the GitHub repository (above) then at the top of the document you will see a button that says "Open in Colab". Click on this button and read the document. 
