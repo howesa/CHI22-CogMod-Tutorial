@@ -15,9 +15,15 @@ If you click on getting_started.ipynb in the GitHub repository (above) then at t
 Schedule:
 
 09:00-10:30 Introduction
+
 10:30-11:00 Break
+
 11:00-12:30 Deep Learning
+
 12:30-14:00 Lunch
+
 14:00-15:55 Reinforcement Learning
+
 15:55-16:35 Break
+
 16:35-18:00 Building a model
