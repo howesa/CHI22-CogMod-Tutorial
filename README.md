@@ -11,3 +11,13 @@ The notebooks for the tutorial will be made available in this GitHub repository 
 If you are attending the tutorial then -- before this date -- you should read the contents of the file 01-Introduction/getting_started.ipynb
 
 If you click on getting_started.ipynb in the GitHub repository (above) then at the top of the document you will see a button that says "Open in Colab". Click on this button and read the document. 
+
+Schedule:
+
+09:00-10:30 Introduction
+10:30-11:00 Break
+11:00-12:30 Deep Learning
+12:30-14:00 Lunch
+14:00-15:55 Reinforcement Learning
+15:55-16:35 Break
+16:35-18:00 Building a model
